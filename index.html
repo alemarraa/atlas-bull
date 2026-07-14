@@ -305,7 +305,7 @@
     </p>
     <div class="hero-ctas">
       <a class="btn js-pump" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
-      <a class="btn btn-ghost" href="https://fomo.family" target="_blank" rel="noopener">Trade on FOMO</a>
+      <a class="btn btn-ghost js-fomo" href="https://fomo.family" target="_blank" rel="noopener">Trade on FOMO</a>
     </div>
     <div class="ca">
       <span class="ca-label">CA</span>
@@ -412,7 +412,7 @@
     <p class="sec-sub">Real estate carried the wealthy for centuries. Now the bull carries it on chain.</p>
     <div class="hero-ctas">
       <a class="btn js-pump" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
-      <a class="btn btn-ghost" href="https://fomo.family" target="_blank" rel="noopener">Trade on FOMO</a>
+      <a class="btn btn-ghost js-fomo" href="https://fomo.family" target="_blank" rel="noopener">Trade on FOMO</a>
       <a class="btn btn-ghost" href="https://telegram.me/+yiIuJr2kprFjMTQx" target="_blank" rel="noopener">Join the Telegram</a>
     </div>
   </div>
@@ -446,14 +446,14 @@
 <div id="toast" role="status">Contract address copied</div>
 
 <script>
-  // === EDIT THIS ONE LINE AFTER LAUNCH: paste the $ATLAS mint address ===
-  const CONTRACT_ADDRESS = '';
+  const CONTRACT_ADDRESS = 'C7AnPr6kEgjMHf6nZAcQJpkrStNFvBKMFu1UoTEnpump';
 
   const isLive = CONTRACT_ADDRESS.length > 20;
   document.getElementById('ca-text').textContent =
     isLive ? CONTRACT_ADDRESS : 'Contract address drops at launch';
   if (isLive) {
     document.querySelectorAll('.js-pump').forEach(a => a.href = 'https://pump.fun/coin/' + CONTRACT_ADDRESS);
+    document.querySelectorAll('.js-fomo').forEach(a => a.href = 'https://fomo.family/tokens/solana/' + CONTRACT_ADDRESS);
     document.querySelectorAll('.js-scan').forEach(a => a.href = 'https://solscan.io/token/' + CONTRACT_ADDRESS);
   }
 
